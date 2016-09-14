@@ -9,6 +9,11 @@ var props = {
 	SUPPORTED: 'display'
 };
 
+var reactProps = {
+	MOZ: 'MozAppearance',
+	WEBKIT: 'WebkitBoxReflect'
+};
+
 var mock = Object.keys(props).reduce(function(acc, prop) {
 	acc[props[prop]] = true;
 	return acc;
@@ -35,7 +40,15 @@ describe('preficks()', function() {
 		expect(preficks('appearance')).to.equal(props.MOZ);
 	});
 
+	it('should return capital Moz if second param set to true', function() {
+		expect(preficks('appearance', true)).to.equal(reactProps.MOZ);
+	});
+
 	it('should check for and return webkit prefix', function() {
 		expect(preficks('boxReflect')).to.equal(props.WEBKIT);
+	});
+
+	it('should return capital Webkit if second param set to true', function() {
+		expect(preficks('boxReflect', true)).to.equal(reactProps.WEBKIT);
 	});
 });

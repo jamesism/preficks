@@ -7,3 +7,10 @@ Resolves a css property to a prefixed one if necessary.
 // preficks('transform') ~ 'webkitTransform'
 el.style[preficks('transform')] = 'scale(1337)';
 ```
+
+The second param is a boolean to indicate whether or not you're in react land and need capital prefixes for some reason.
+
+```
+// preficks('transform') ~ 'WebkitTransform'
+<Component style={{[preficks('transform')]: 'scale(1337)'}} />
+```
