@@ -4,7 +4,7 @@ var preficks = require('./index');
 
 var props = {
 	MS: 'msTransform',
-	MOZ: 'mozAppearance',
+	MOZ: 'MozAppearance',
 	WEBKIT: 'webkitBoxReflect',
 	SUPPORTED: 'display'
 };

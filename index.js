@@ -1,5 +1,5 @@
 var cache = {},
-	prefixes = ['webkit', 'moz', 'ms'],
+	prefixes = ['webkit', 'Moz', 'ms'],
 	reactPrefixes = ['Webkit', 'Moz', 'ms'],
 	div;
 
